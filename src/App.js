@@ -43,7 +43,7 @@ function App() {
   // Using useEffect to call the API once mounted and set the data
   useEffect(() => {
     (async () => {
-      const result = await axios.get("table1.json");
+      const result = await axios.get("table2.json");
       // https://api.tvmaze.com/search/shows?q=snow
       // table1.json
       setData(result.data);

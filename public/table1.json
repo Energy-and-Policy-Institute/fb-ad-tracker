@@ -1,33 +1,23 @@
 [
     {
-        "name": "American Petroleum Institute",
-        "ads": 14325,
-        "spending": 8510500
-    },
-    {
-        "name": "Maine Affordable Energy",
-        "ads": 387,
-        "spending": 1021400
-    },
-    {
         "name": "Consumer Energy Alliance",
         "ads": 2063,
         "spending": 887700
     },
     {
+        "name": "The Empowerment Alliance",
+        "ads": 2031,
+        "spending": 872600
+    },
+    {
         "name": "Voices For Cooperative Power",
         "ads": 507,
-        "spending": 831200
+        "spending": 836200
     },
     {
         "name": "Natural Allies, Inc.",
-        "ads": 1251,
-        "spending": 697100
-    },
-    {
-        "name": "Energy Citizens",
-        "ads": 1650,
-        "spending": 539700
+        "ads": 775,
+        "spending": 336100
     },
     {
         "name": "The Alliance For Michigan Power",
@@ -35,27 +25,32 @@
         "spending": 257700
     },
     {
-        "name": "Citizens Energizing Michigan's Economy",
+        "name": "Citizens Energizing Michigan'S Economy",
         "ads": 976,
-        "spending": 242100
+        "spending": 242200
+    },
+    {
+        "name": "Power For Tomorrow",
+        "ads": 192,
+        "spending": 204500
     },
     {
         "name": "Alliance For Michigan Power",
         "ads": 724,
-        "spending": 183300
+        "spending": 183600
     },
     {
         "name": "Partnership For Energy Progress",
         "ads": 188,
-        "spending": 154900
+        "spending": 155500
     },
     {
         "name": "Affordable Energy For New Jersey",
         "ads": 1040,
-        "spending": 138100
+        "spending": 140300
     },
     {
-        "name": "Citizens For Energizing Michigan's Economy",
+        "name": "Citizens For Energizing Michigan'S Economy",
         "ads": 121,
         "spending": 126900
     },
@@ -67,17 +62,12 @@
     {
         "name": "Seniors Across America",
         "ads": 134,
-        "spending": 102600
+        "spending": 104700
     },
     {
-        "name": "Maine Affordable Energy Coalition",
-        "ads": 172,
-        "spending": 92700
-    },
-    {
-        "name": "Molly Anne Smathers",
-        "ads": 484,
-        "spending": 78100
+        "name": "Edison Electric Institute",
+        "ads": 564,
+        "spending": 73600
     },
     {
         "name": "Affordable Energy Coalition",
@@ -90,9 +80,44 @@
         "spending": 58400
     },
     {
+        "name": "Edison Electric Institute, Inc.",
+        "ads": 228,
+        "spending": 50100
+    },
+    {
+        "name": "The Real Coalition Iowa",
+        "ads": 439,
+        "spending": 44800
+    },
+    {
+        "name": "We Stand For Energy",
+        "ads": 163,
+        "spending": 21200
+    },
+    {
+        "name": "The Sc Clean Energy For All Coalition",
+        "ads": 132,
+        "spending": 20400
+    },
+    {
+        "name": "Californians For Balanced Energy Solutions",
+        "ads": 49,
+        "spending": 19000
+    },
+    {
         "name": "New Yorkers For Affordable Energy",
         "ads": 2,
         "spending": 8300
+    },
+    {
+        "name": "Real Coalition",
+        "ads": 7,
+        "spending": 3900
+    },
+    {
+        "name": "Jobkeeper Alliance",
+        "ads": 1,
+        "spending": 2000
     },
     {
         "name": "Mwwpr",

@@ -1,8 +1,9 @@
 import React, { useMemo, useState, useEffect } from "react";
-import axios from 'axios';
-import Table from "./Table";
+// import axios from 'axios';
+import { useData } from "./Data/summary";
+import Table from "../components/Table";
 import styled from 'styled-components'
-import "./App.css"
+import "../App.css"
 
 // components
 const Title = styled.h1`
@@ -35,22 +36,10 @@ const SmallSection = styled.h3`
   padding: 0 0 0 0;
 `;
 
-function App() {
-
-  // data state to store the TV Maze API data. Its initial value is an empty array
-  const [data, setData] = useState([]);
-
-  // Using useEffect to call the API once mounted and set the data
-  useEffect(() => {
-    (async () => {
-      const result = await axios.get("table2.json");
-      // https://api.tvmaze.com/search/shows?q=snow
-      // table1.json
-      setData(result.data);
-    })();
-  }, []);
-
-  // console.log(data)
+const Landing = () => {
+    
+    // data variable, as an immutable object
+    const [data] = useData()
 
   /* 
     - Columns is a simple array right now, but it will contain some logic later on. It is recommended by react-table to memoize the columns data
@@ -78,12 +67,13 @@ function App() {
           {
             id: "spent",
             Header: "Amount Spent",
-            accessor: row => row.spending,
-            Cell: ({ cell: { value } }) => {
-              const number = value.toLocaleString("en-US");
+            accessor: row => row.lowerAmount,
+            Cell: (props) => {
+              const number1 = props.row.original.lowerAmount.toLocaleString("en-US");
+              const number2 = props.row.original.upperAmount.toLocaleString("en-US");
               return (
                 <>
-                  ${number}
+                  ${number1}-{number2}
                 </>
               )
             }
@@ -93,14 +83,9 @@ function App() {
 
   return (
     <div className="App">
-      <Title>Front Group Spending Tracker</Title>
-      <Subtitle>Explore how much front groups are spending on ads about social issues, elections or politics across Meta technologies.</Subtitle>
-      <Section>Spending by Front Group</Section>
-      <SmallSection>May 7, 2018 - August 27, 2022</SmallSection>
-      <Subtitle>See spending totals by specific Front Groups. You can sort the results.</Subtitle>
-      <Table columns={columns} data={data} />
+      <Table columns={columns} data={data.toJS()} />
     </div>
   );
 }
 
-export default App;
+export default Landing

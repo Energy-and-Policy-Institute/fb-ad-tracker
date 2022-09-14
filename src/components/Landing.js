@@ -1,4 +1,4 @@
-import React, { useMemo, useState, useEffect } from "react";
+import React, { useMemo } from "react";
 // import axios from 'axios';
 import { useData } from "./Data/summary";
 import Table from "../components/Table";
@@ -7,7 +7,7 @@ import "../App.css"
 
 // components
 const Title = styled.h1`
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: black;
   margin: 0 0 0 0;
@@ -15,21 +15,7 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.h1`
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: black;
-`;
-
-const Section = styled.h3`
-  font-size: 1.50rem;
-  font-weight: 500;
-  color: black;
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
-`;
-
-const SmallSection = styled.h3`
-  font-size: 1.25rem;
+  font-size: 2rem;
   font-weight: 500;
   color: black;
   margin: 0 0 0 0;
@@ -49,7 +35,15 @@ const Landing = () => {
     () => [{
             id: "name",
             Header: "Name",
-            accessor: row => row.name
+            accessor: row => row.name,
+            Cell: ({ cell : { value } }) => {
+              const pathName = value.replace(/\s+/g, '-')
+              return (
+                <>
+                <a href={pathName}>{value}</a>
+                </>
+              )
+            }
           },
           {
             id: "ads",
@@ -73,7 +67,7 @@ const Landing = () => {
               const number2 = props.row.original.upperAmount.toLocaleString("en-US");
               return (
                 <>
-                  ${number1}-{number2}
+                  ${number1} - ${number2}
                 </>
               )
             }
@@ -83,6 +77,9 @@ const Landing = () => {
 
   return (
     <div className="App">
+      <Title>Spending by Utility Front Group</Title>
+      <Subtitle>May 24, 2018 - September 7, 2022</Subtitle>
+
       <Table columns={columns} data={data.toJS()} />
     </div>
   );

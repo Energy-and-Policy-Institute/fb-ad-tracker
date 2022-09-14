@@ -32,11 +32,11 @@ export default function Table({ columns, data }) {
 
   return (
     <>
-      <input
+      {/* <input
         value={filterInput}
         onChange={handleFilterChange}
         placeholder={"Search front group"}
-      />
+      /> */}
 
       <table {...getTableProps()}>
         <thead>

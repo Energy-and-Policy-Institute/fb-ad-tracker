@@ -4,7 +4,7 @@ import { fromJS } from 'immutable'
 export const useData = () => {
   const data = useStaticQuery(graphql`
   query {
-    allSummaryJson {
+    allSummaryCleanJson {
       edges {
         node {
           ads
@@ -12,11 +12,13 @@ export const useData = () => {
           lowerAmount
           name
           upperAmount
+          pageId
+          url
         }
       }
     }
   }
-  `).allSummaryJson.edges.map(({ node }) => {
+  `).allSummaryCleanJson.edges.map(({ node }) => {
     // parse data types as needed
     const { id } = node
 

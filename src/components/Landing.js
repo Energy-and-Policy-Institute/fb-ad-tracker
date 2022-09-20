@@ -19,6 +19,7 @@ const Subtitle = styled.h1`
   font-weight: 500;
   color: black;
   margin: 0 0 0 0;
+  margin-bottom: 2rem;
   padding: 0 0 0 0;
 `;
 
@@ -35,12 +36,13 @@ const Landing = () => {
     () => [{
             id: "name",
             Header: "Name",
-            accessor: row => row.name,
-            Cell: ({ cell : { value } }) => {
-              const pathName = value.replace(/\s+/g, '-')
+            accessor: row => row.url,
+            Cell: (props) => {
+              const pathUrl = props.row.original.url;
+              const name = props.row.original.name;
               return (
                 <>
-                <a href={pathName}>{value}</a>
+                <a href={pathUrl}>{name}</a>
                 </>
               )
             }

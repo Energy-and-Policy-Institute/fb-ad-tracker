@@ -49,7 +49,7 @@ table th.sort-desc::before {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: HelveticaNeue, sans-serif;
 }
 .badge {
   background-color: #9ae6b4;

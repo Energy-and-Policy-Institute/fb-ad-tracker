@@ -6,22 +6,25 @@ import { Map, fromJS, List } from "immutable";
 import { useData } from "./Data/summary";
 import styled from 'styled-components'
 import { MdOutlineKeyboardBackspace } from 'react-icons/md';
+import { OutboundLink } from './Link'
 // import { useIndividualData } from "./Data/individuals";
 
 // components
 const Title = styled.h1`
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   color: black;
-  margin: 0 0 0 0;
+  margin-top: 0rem;
+  margin-bottom: 0.5rem;
   padding: 0 0 0 0;
 `;
 
 const Subtitle = styled.h1`
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 300;
   color: black;
-  margin: 0 0 0 0;
+  margin-top: 0rem;
+  margin-bottom: 2rem;
   padding: 0 0 0 0;
 `;
 
@@ -30,6 +33,14 @@ const Desc = styled.h1`
   font-weight: 500;
   color: black;
   margin-top: 2rem;
+  padding: 0 0 0 0;
+`;
+
+const Credit = styled.h1`
+  font-size: 1rem;
+  font-weight: 300;
+  color: black;
+  margin-top: 1rem;
   padding: 0 0 0 0;
 `;
 
@@ -54,7 +65,6 @@ export const query = graphql`
     }
 `
 
-
 const PageTemplate = (props) => {
   
   const data = props.data.allIndividualJson.nodes;
@@ -65,7 +75,7 @@ const PageTemplate = (props) => {
   const filteredGroup = frontGroup.filter(val => val.name.includes(data[0].name))
 
   const adLink = "https://www.facebook.com/ads/library/?active_status=all&ad_type=political_and_issue_ads&country=US&view_all_page_id=" + filteredGroup[0].pageId + "&sort_data[direction]=desc&sort_data[mode]=relevancy_monthly_grouped&search_type=page&media_type=all";
-    
+  
     const columns = useMemo(
         () => [{
                 id: "region",
@@ -90,16 +100,18 @@ const PageTemplate = (props) => {
         []
       );
 
-      var groupName = data[0].name
+      var groupName = data[0].name;
+      var count = filteredGroup[0].ads.toLocaleString("en-US");
       
     return (
     <div className="App">
       <Title>{groupName}</Title>
       <Subtitle>Spending by Region</Subtitle>
-      <Subtitle>May 24, 2018 - September 7, 2022</Subtitle>
-      <Desc>View {groupName}'s ads in the Facebook Ad Library <a href={adLink}>here</a>.</Desc>
+      <Desc>Between May 24, 2018 and September 7, 2022, {groupName} ran <OutboundLink to={adLink} from='/'>{count} ad(s) on Meta's platforms</OutboundLink>.</Desc>
       {/* <Return><a href="/"><MdOutlineKeyboardBackspace /> Go back </a></Return> */}
       <Table columns={columns} data={data} />
+      <Credit>Tool built by Shelby Green, with the <OutboundLink to="https://www.energyandpolicy.org" from="/">Energy and Policy Institute</OutboundLink>. Click <OutboundLink to="https://github.com/Energy-and-Policy-Institute/fb-ad-tracker" from='/'>here</OutboundLink> to access the methodology and source code.</Credit>
+      <Credit>Having issues using the tool or want to make suggestions? Please <OutboundLink to="https://www.energyandpolicy.org/contact-us/" from="/">contact</OutboundLink> us.</Credit>
     </div>
     )
 };

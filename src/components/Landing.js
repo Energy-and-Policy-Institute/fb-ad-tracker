@@ -3,22 +3,24 @@ import React, { useMemo } from "react";
 import { useData } from "./Data/summary";
 import Table from "../components/Table";
 import styled from 'styled-components'
+import { OutboundLink } from './Link'
 import "../App.css"
 
 // components
 const Title = styled.h1`
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   color: black;
-  margin: 0 0 0 0;
+  margin-top: 0rem;
+  margin-bottom: 0.5rem;
   padding: 0 0 0 0;
 `;
 
 const Subtitle = styled.h1`
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 300;
   color: black;
-  margin: 0 0 0 0;
+  margin-top: 0rem;
   margin-bottom: 2rem;
   padding: 0 0 0 0;
 `;
@@ -42,7 +44,8 @@ const Landing = () => {
               const name = props.row.original.name;
               return (
                 <>
-                <a href={pathUrl}>{name}</a>
+                <OutboundLink to={pathUrl} from='/'>{name}</OutboundLink>
+                {/* <a href={pathUrl}>{name}</a> */}
                 </>
               )
             }
@@ -80,7 +83,7 @@ const Landing = () => {
   return (
     <div className="App">
       <Title>Spending by Utility Front Group</Title>
-      <Subtitle>May 24, 2018 - September 7, 2022</Subtitle>
+      <Subtitle>Time Period: May 24, 2018 - September 7, 2022</Subtitle>
 
       <Table columns={columns} data={data.toJS()} />
     </div>

@@ -32,7 +32,7 @@ const Desc = styled.h1`
   font-size: 1.5rem;
   font-weight: 500;
   color: black;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
   padding: 0 0 0 0;
 `;
 
@@ -102,16 +102,14 @@ const PageTemplate = (props) => {
 
       var groupName = data[0].name;
       var count = filteredGroup[0].ads.toLocaleString("en-US");
+      var spend = filteredGroup[0].lowerAmount.toLocaleString("en-US");
       
     return (
     <div className="App">
-      <Title>{groupName}</Title>
-      <Subtitle>Spending by Region</Subtitle>
-      <Desc>Between May 24, 2018 and September 7, 2022, {groupName} ran <OutboundLink to={adLink} from='/'>{count} ad(s) on Meta's platforms</OutboundLink>.</Desc>
+      <Desc>Between May 24, 2018 and September 20, 2022, {groupName} ran <OutboundLink to={adLink} from='/'>{count} ad(s) across Meta's platforms</OutboundLink>, spending over ${spend}. Below is its ad spend by region:</Desc>
       {/* <Return><a href="/"><MdOutlineKeyboardBackspace /> Go back </a></Return> */}
       <Table columns={columns} data={data} />
-      <Credit>Tool built by Shelby Green, with the <OutboundLink to="https://www.energyandpolicy.org" from="/">Energy and Policy Institute</OutboundLink>. Click <OutboundLink to="https://github.com/Energy-and-Policy-Institute/fb-ad-tracker" from='/'>here</OutboundLink> to access the methodology and source code.</Credit>
-      <Credit>Having issues using the tool or want to make suggestions? Please <OutboundLink to="https://www.energyandpolicy.org/contact-us/" from="/">contact</OutboundLink> us.</Credit>
+      <Credit>Facebook Ad Spending Tracker built by the <OutboundLink to="https://www.energyandpolicy.org" from="/">Energy and Policy Institute</OutboundLink>. Click <OutboundLink to="https://github.com/Energy-and-Policy-Institute/fb-ad-tracker" from='/'>here</OutboundLink> to access the methodology and source code. Having issues using the tool or want to make suggestions? Please <OutboundLink to="https://www.energyandpolicy.org/contact-us/" from="/">contact</OutboundLink> us.</Credit>
     </div>
     )
 };

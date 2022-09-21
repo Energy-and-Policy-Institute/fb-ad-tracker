@@ -25,6 +25,14 @@ const Subtitle = styled.h1`
   padding: 0 0 0 0;
 `;
 
+const Credit = styled.h1`
+  font-size: 1rem;
+  font-weight: 300;
+  color: black;
+  margin-top: 1rem;
+  padding: 0 0 0 0;
+`;
+
 const Landing = () => {
     
     // data variable, as an immutable object
@@ -38,14 +46,13 @@ const Landing = () => {
     () => [{
             id: "name",
             Header: "Name",
-            accessor: row => row.url,
+            accessor: row => row.name,
             Cell: (props) => {
               const pathUrl = props.row.original.url;
               const name = props.row.original.name;
               return (
                 <>
                 <OutboundLink to={pathUrl} from='/'>{name}</OutboundLink>
-                {/* <a href={pathUrl}>{name}</a> */}
                 </>
               )
             }
@@ -83,9 +90,9 @@ const Landing = () => {
   return (
     <div className="App">
       <Title>Spending by Utility Front Group</Title>
-      <Subtitle>Time Period: May 24, 2018 - September 7, 2022</Subtitle>
-
+      <Subtitle>Time Period: May 24, 2018 - September 20, 2022</Subtitle>
       <Table columns={columns} data={data.toJS()} />
+      <Credit>Facebook Ad Spending Tracker built by the <OutboundLink to="https://www.energyandpolicy.org" from="/">Energy and Policy Institute</OutboundLink>. Click <OutboundLink to="https://github.com/Energy-and-Policy-Institute/fb-ad-tracker" from='/'>here</OutboundLink> to access the methodology and source code. Having issues using the tool or want to make suggestions? Please <OutboundLink to="https://www.energyandpolicy.org/contact-us/" from="/">contact</OutboundLink> us.</Credit>
     </div>
   );
 }

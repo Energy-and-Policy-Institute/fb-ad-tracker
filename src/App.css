@@ -49,7 +49,8 @@ table th.sort-desc::before {
   /* display: flex; */
   flex-direction: column;
   /* padding: 20px; */
-  font-family: HelveticaNeue, sans-serif;
+  font-family: "HelveticaNeue";
+  color: #343e47;
 }
 .badge {
   background-color: #9ae6b4;
@@ -69,4 +70,23 @@ input {
   border-radius: 5px;
   border: 1px solid #ddd;
   box-shadow: none;
+}
+
+body {
+  margin:0;
+  padding:0;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: local("HelveticaNeue"),
+   url("./fonts/HelveticaNeue/HelveticaNeue-01.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeue-Bold";
+  src: local("HelveticaNeue-Bold"),
+   url("./fonts/HelveticaNeue/HelveticaNeue-Bold-02.ttf") format("truetype");
+  font-weight: bold;
 }

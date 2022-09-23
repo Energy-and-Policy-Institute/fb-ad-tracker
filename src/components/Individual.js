@@ -108,10 +108,12 @@ const PageTemplate = (props) => {
     <div className="App">
       <Desc>Between May 24, 2018 and September 20, 2022, {groupName} ran {count} ad(s) across Meta's platforms, spending over ${spend}. To see the original ads from the Facebook Ad Library, click <OutboundLink to={adLink} from='/'>here</OutboundLink>.
       <br></br><br></br>
+      Read our <OutboundLink from="/" to="https://www.energyandpolicy.org/utility-front-groups-spending-on-disinformation-advertising">report that analyzes</OutboundLink> these front group advertisements. View our methodology and source code <OutboundLink from="/" to="https://github.com/Energy-and-Policy-Institute/fb-ad-tracker">here</OutboundLink>.
+      <br></br><br></br>
       Below is its ad spend by region:</Desc>
       {/* <Return><a href="/"><MdOutlineKeyboardBackspace /> Go back </a></Return> */}
       <Table columns={columns} data={data} />
-      {/* <Credit>Facebook Ad Spending Tracker built by the <OutboundLink to="https://www.energyandpolicy.org" from="/">Energy and Policy Institute</OutboundLink>. Click <OutboundLink to="https://github.com/Energy-and-Policy-Institute/fb-ad-tracker" from='/'>here</OutboundLink> to access the methodology and source code. Having issues using the tool or want to make suggestions? Please <OutboundLink to="https://www.energyandpolicy.org/contact-us/" from="/">contact</OutboundLink> us.</Credit> */}
+      <Credit>Having issues using the tool or want to make a suggestion? Please <OutboundLink to="https://www.energyandpolicy.org/contact-us/" from="/">contact</OutboundLink> us.</Credit>
     </div>
     )
 };

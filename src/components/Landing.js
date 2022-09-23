@@ -9,17 +9,16 @@ import "../App.css"
 // components
 const Title = styled.h1`
   font-size: 2rem;
-  font-weight: 700;
-  color: black;
+  font-weight: bold;
   margin-top: 0rem;
   margin-bottom: 0.5rem;
   padding: 0 0 0 0;
+  font-family: "HelveticaNeue-Bold";
 `;
 
 const Subtitle = styled.h1`
   font-size: 1.5rem;
   font-weight: 300;
-  color: black;
   margin-top: 0rem;
   margin-bottom: 2rem;
   padding: 0 0 0 0;
@@ -92,7 +91,7 @@ const Landing = () => {
       <Title>Spending by Utility Front Group</Title>
       <Subtitle>Time Period: May 24, 2018 - September 20, 2022</Subtitle>
       <Table columns={columns} data={data.toJS()} />
-      <Credit>Facebook Ad Spending Tracker built by the <OutboundLink to="https://www.energyandpolicy.org" from="/">Energy and Policy Institute</OutboundLink>. Click <OutboundLink to="https://github.com/Energy-and-Policy-Institute/fb-ad-tracker" from='/'>here</OutboundLink> to access the methodology and source code. Having issues using the tool or want to make suggestions? Please <OutboundLink to="https://www.energyandpolicy.org/contact-us/" from="/">contact</OutboundLink> us.</Credit>
+      {/* <Credit>Facebook Ad Spending Tracker built by the <OutboundLink to="https://www.energyandpolicy.org" from="/">Energy and Policy Institute</OutboundLink>. Click <OutboundLink to="https://github.com/Energy-and-Policy-Institute/fb-ad-tracker" from='/'>here</OutboundLink> to access the methodology and source code. Having issues using the tool or want to make suggestions? Please <OutboundLink to="https://www.energyandpolicy.org/contact-us/" from="/">contact</OutboundLink> us.</Credit> */}
     </div>
   );
 }

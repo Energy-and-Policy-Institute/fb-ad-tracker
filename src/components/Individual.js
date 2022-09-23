@@ -29,9 +29,9 @@ const Subtitle = styled.h1`
 `;
 
 const Desc = styled.h1`
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: black;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 32px;
   margin-top: 0.5rem;
   padding: 0 0 0 0;
 `;
@@ -106,10 +106,12 @@ const PageTemplate = (props) => {
       
     return (
     <div className="App">
-      <Desc>Between May 24, 2018 and September 20, 2022, {groupName} ran <OutboundLink to={adLink} from='/'>{count} ad(s) across Meta's platforms</OutboundLink>, spending over ${spend}. Below is its ad spend by region:</Desc>
+      <Desc>Between May 24, 2018 and September 20, 2022, {groupName} ran {count} ad(s) across Meta's platforms, spending over ${spend}. To see the original ads from the Facebook Ad Library, click <OutboundLink to={adLink} from='/'>here</OutboundLink>.
+      <br></br><br></br>
+      Below is its ad spend by region:</Desc>
       {/* <Return><a href="/"><MdOutlineKeyboardBackspace /> Go back </a></Return> */}
       <Table columns={columns} data={data} />
-      <Credit>Facebook Ad Spending Tracker built by the <OutboundLink to="https://www.energyandpolicy.org" from="/">Energy and Policy Institute</OutboundLink>. Click <OutboundLink to="https://github.com/Energy-and-Policy-Institute/fb-ad-tracker" from='/'>here</OutboundLink> to access the methodology and source code. Having issues using the tool or want to make suggestions? Please <OutboundLink to="https://www.energyandpolicy.org/contact-us/" from="/">contact</OutboundLink> us.</Credit>
+      {/* <Credit>Facebook Ad Spending Tracker built by the <OutboundLink to="https://www.energyandpolicy.org" from="/">Energy and Policy Institute</OutboundLink>. Click <OutboundLink to="https://github.com/Energy-and-Policy-Institute/fb-ad-tracker" from='/'>here</OutboundLink> to access the methodology and source code. Having issues using the tool or want to make suggestions? Please <OutboundLink to="https://www.energyandpolicy.org/contact-us/" from="/">contact</OutboundLink> us.</Credit> */}
     </div>
     )
 };

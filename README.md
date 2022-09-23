@@ -1,14 +1,14 @@
 ## Utility Front Group Political Advertisement Spend Tracker
 
-Political advertisements from 18 utility front groups were compiled and stored in a publicly accessible table, using data from Facebook’s Ad Library. 
+Political advertisements from 14 utility front groups were compiled and stored in a publicly accessible table, using data from Facebook’s Ad Library. 
 
 Facebook’s Ad Library went into effect on May 7th, 2018, but actual enforcement began at a later date, on May 24th, 2018. 
 
-For the purpose of our analysis, we used a study period running from May 24th, 2018, when enforcement began, to September 7th, 2022. Our dataset contains 14,060 ads created during the study period, as summarized in the table below:
+For the purpose of our analysis, we used a study period running from May 24th, 2018, when enforcement began, to September 20th, 2022. Our dataset contains 14,060 ads created during the study period, as summarized in the table below:
 
 | Time Period                      | Number of Front Groups | Total Ads | Total Spend             |
 |----------------------------------|------------------------|-----------|-------------------------|
-| May 24, 2018 - September 7, 2022 | 18                     | 14,060    | $3,270,800 - $5,257,100 |
+| May 24, 2018 - September 20, 2022 | 14                     | 12,712    | $2,448,600 - $4,132,300 |
 
 
 Meta publishes each ad that it or advertisers deem political along with some metadata on its Ad Library site and in an API.

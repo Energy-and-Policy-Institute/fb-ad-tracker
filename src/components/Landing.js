@@ -25,9 +25,7 @@ const Subtitle = styled.h1`
 `;
 
 const Credit = styled.h1`
-  font-size: 1rem;
-  font-weight: 300;
-  color: black;
+  font-size: 0.5rem;
   margin-top: 1rem;
   padding: 0 0 0 0;
 `;

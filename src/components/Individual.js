@@ -113,7 +113,7 @@ const PageTemplate = (props) => {
       Below is its ad spend by region:</Desc>
       {/* <Return><a href="/"><MdOutlineKeyboardBackspace /> Go back </a></Return> */}
       <Table columns={columns} data={data} />
-      <Credit>Having issues using the tool or want to make a suggestion? Please <OutboundLink to="https://www.energyandpolicy.org/contact-us/" from="/">contact</OutboundLink> us.</Credit>
+      <Credit>Tool built by <OutboundLink to="https://www.energyandpolicy.org/shelby-green/" from="/">Shelby Green</OutboundLink> with the Energy and Policy Institute. Having issues using the tool or want to make a suggestion? Please <OutboundLink to="https://www.energyandpolicy.org/contact-us/" from="/">contact</OutboundLink> us!</Credit>
     </div>
     )
 };

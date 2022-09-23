@@ -91,7 +91,7 @@ const Landing = () => {
       <Title>Spending by Utility Front Group</Title>
       <Subtitle>May 24, 2018 - September 20, 2022</Subtitle>
       <Table columns={columns} data={data.toJS()} />
-      {/* <Credit>Facebook Ad Spending Tracker built by the <OutboundLink to="https://www.energyandpolicy.org" from="/">Energy and Policy Institute</OutboundLink>. Click <OutboundLink to="https://github.com/Energy-and-Policy-Institute/fb-ad-tracker" from='/'>here</OutboundLink> to access the methodology and source code. Having issues using the tool or want to make suggestions? Please <OutboundLink to="https://www.energyandpolicy.org/contact-us/" from="/">contact</OutboundLink> us.</Credit> */}
+      <Credit>Tool built by <OutboundLink to="https://www.energyandpolicy.org/shelby-green/" from="/">Shelby Green</OutboundLink> with the Energy and Policy Institute. Having issues using the tool or want to make a suggestion? Please <OutboundLink to="https://www.energyandpolicy.org/contact-us/" from="/">contact</OutboundLink> us!</Credit>
     </div>
   );
 }

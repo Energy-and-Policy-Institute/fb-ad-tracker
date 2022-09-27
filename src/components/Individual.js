@@ -10,23 +10,6 @@ import { OutboundLink } from './Link'
 // import { useIndividualData } from "./Data/individuals";
 
 // components
-const Title = styled.h1`
-  font-size: 2rem;
-  font-weight: 700;
-  color: black;
-  margin-top: 0rem;
-  margin-bottom: 0.5rem;
-  padding: 0 0 0 0;
-`;
-
-const Subtitle = styled.h1`
-  font-size: 1.5rem;
-  font-weight: 300;
-  color: black;
-  margin-top: 0rem;
-  margin-bottom: 2rem;
-  padding: 0 0 0 0;
-`;
 
 const Desc = styled.h1`
   font-size: 19px;
@@ -34,6 +17,9 @@ const Desc = styled.h1`
   line-height: 32px;
   margin-top: 0.5rem;
   padding: 0 0 0 0;
+  @media (max-width: 600px) {
+    font-weight: 24px;
+  };
 `;
 
 const Credit = styled.h1`
@@ -42,14 +28,9 @@ const Credit = styled.h1`
   color: black;
   margin-top: 1rem;
   padding: 0 0 0 0;
-`;
-
-const Return = styled.h1`
-  font-size: 2rem;
-  font-weight: 500;
-  color: black;
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
+  @media (max-width: 600px) {
+    font-weight: 24px;
+  };
 `;
 
 export const query = graphql`

@@ -7,7 +7,7 @@ import { OutboundLink } from './Link'
 import "../App.css"
 
 // components
-const Title = styled.h1`
+const Title = styled.div`
   font-size: 2rem;
   font-weight: bold;
   margin-top: 0rem;
@@ -16,7 +16,7 @@ const Title = styled.h1`
   font-family: "HelveticaNeue-Bold";
 `;
 
-const Subtitle = styled.h1`
+const Subtitle = styled.div`
   font-size: 1.5rem;
   font-weight: 300;
   margin-top: 0rem;
@@ -24,10 +24,13 @@ const Subtitle = styled.h1`
   padding: 0 0 0 0;
 `;
 
-const Credit = styled.h1`
-  font-size: 0.5rem;
+const Credit = styled.div`
+  font-size: 1rem;
+  font-weight: 500;
   margin-top: 1rem;
   padding: 0 0 0 0;
+  font-family: "HelveticaNeue-Bold";
+  font-weight: bold;
 `;
 
 const Landing = () => {

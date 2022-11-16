@@ -2,39 +2,40 @@
     {
         "name": "Consumer Energy Alliance",
         "ads": 2157,
-        "lowerAmount": 571500,
-        "upperAmount": 902100,
+        "lowerAmount": 576200,
+        "upperAmount": 908000,
         "url": "https:\/\/www.energyandpolicy.org\/consumer-energy-alliance\/",
         "pageId": 49560242814
     },
     {
         "name": "The Empowerment Alliance",
-        "ads": 2170,
-        "lowerAmount": 566900,
-        "upperAmount": 893400,
+        "ads": 250,
+        "lowerAmount": 27800,
+        "upperAmount": 56800,
+        "url":"http://www.energyandpolicy.org/the-empowerment-alliance",
         "pageId": 101691091213750
     },
     {
         "name": "Natural Allies for a Clean Energy Future",
-        "ads": 1261,
-        "lowerAmount": 493700,
-        "upperAmount": 703500,
+        "ads": 1175,
+        "lowerAmount": 527100,
+        "upperAmount": 736500,
         "url": "https:\/\/www.energyandpolicy.org\/natural-allies-for-a-clean-energy-future\/",
         "pageId": 100801038449520
     },
     {
         "name": "Alliance for Michigan Power",
-        "ads": 2816,
-        "lowerAmount": 151900,
-        "upperAmount": 450100,
+        "ads": 150,
+        "lowerAmount": 51900,
+        "upperAmount": 74500,
         "url": "https:\/\/www.energyandpolicy.org\/alliance-for-michigan-power\/",
         "pageId": 738063612887865
     },
     {
         "name": "Citizens Energizing Michigan's Economy",
         "ads": 1100,
-        "lowerAmount": 231100,
-        "upperAmount": 372100,
+        "lowerAmount": 235300,
+        "upperAmount": 376300,
         "url": "https:\/\/www.energyandpolicy.org\/citizens-for-energizing-michigans-economy\/",
         "pageId": 591566840920364
     },
@@ -48,23 +49,26 @@
     },
     {
         "name": "Affordable Energy for New Jersey",
-        "ads": 1095,
-        "lowerAmount": 46300,
-        "upperAmount": 157400,
+        "ads": 192,
+        "lowerAmount": 161600,
+        "upperAmount": 204500,
+        "url": "http://www.energyandpolicy.org/affordable-energy-for-new-jersey",
         "pageId": 102281724942742
     },
     {
         "name": "We Stand For Energy",
-        "ads": 970,
-        "lowerAmount": 48900,
-        "upperAmount": 148300,
+        "ads": 625,
+        "lowerAmount": 36500,
+        "upperAmount": 101000,
+        "url":"http://www.energyandpolicy.org/we-stand-for-energy",
         "pageId": 482100658584410
     },
     {
         "name": "Seniors Across America",
-        "ads": 144,
-        "lowerAmount": 84300,
-        "upperAmount": 113700,
+        "ads": 158,
+        "lowerAmount": 120100,
+        "upperAmount": 164000,
+        "url":"http://www.energyandpolicy.org/seniors-across-america",
         "pageId": 108203188195224
     },
     {
@@ -77,17 +81,17 @@
     },
     {
         "name": "Affordable Energy Coalition",
-        "ads": 100,
-        "lowerAmount": 32400,
-        "upperAmount": 48000,
+        "ads": 117,
+        "lowerAmount": 45200,
+        "upperAmount": 65300,
         "url": "https:\/\/www.energyandpolicy.org\/affordable-energy-coalition\/",
         "pageId": 106039214814684
     },
     {
         "name": "Partnership for Energy Progress",
-        "ads": 75,
-        "lowerAmount": 28300,
-        "upperAmount": 40600,
+        "ads": 198,
+        "lowerAmount": 131300,
+        "upperAmount": 175200,
         "url": "https:\/\/www.energyandpolicy.org\/partnership-for-energy-progress\/",
         "pageId": 107500120800840
     },
@@ -96,6 +100,7 @@
         "ads": 132,
         "lowerAmount": 6800,
         "upperAmount": 20400,
+        "url":"http://www.energyandpolicy.org/sc-clean-energy-for-all",
         "pageId": 396341921119746
     },
     {
@@ -108,9 +113,10 @@
     },
     {
         "name": "New Yorkers For Affordable Energy",
-        "ads": 4,
-        "lowerAmount": 7200,
-        "upperAmount": 8500,
+        "ads": 11,
+        "lowerAmount": 39100,
+        "upperAmount": 48200,
+        "url":"http://www.energyandpolicy.org/new-yorkers-for-affordable-energy",
         "pageId": 111394533709201
     },
     {

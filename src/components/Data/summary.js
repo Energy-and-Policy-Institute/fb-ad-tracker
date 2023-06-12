@@ -1,10 +1,12 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import { fromJS } from 'immutable'
 
+//           pageId
+// url
 export const useData = () => {
   const data = useStaticQuery(graphql`
   query {
-    allSummaryCleanJson {
+    allSummary061223CleanJson {
       edges {
         node {
           ads
@@ -12,13 +14,13 @@ export const useData = () => {
           lowerAmount
           name
           upperAmount
-          pageId
           url
+          pageId
         }
       }
     }
   }
-  `).allSummaryCleanJson.edges.map(({ node }) => {
+  `).allSummary061223CleanJson.edges.map(({ node }) => {
     // parse data types as needed
     const { id } = node
 

@@ -23,7 +23,7 @@ const NotFoundPage = () => (
   <div>
     <SEO title="404: Not found" />
     <Title>404: Not Found</Title>
-    <Subtitle>We don't a landing page for this front group yet. Want to us help us? Please share suggestions or comments <OutboundLink to="https://www.energyandpolicy.org/contact-us/" from="/">here</OutboundLink>.</Subtitle>
+    <Subtitle>We don't have a landing page for this front group yet. Want to us help us? Please share suggestions or comments <OutboundLink to="https://www.energyandpolicy.org/contact-us/" from="/">here</OutboundLink>.</Subtitle>
   </div>
 )
 

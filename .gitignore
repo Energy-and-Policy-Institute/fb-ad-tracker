@@ -19,7 +19,7 @@
 .env.production.local
 .cache
 # scripts/fetch-facebook-ads.ipynb
-
+notes.md
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

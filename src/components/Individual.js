@@ -35,7 +35,7 @@ const Credit = styled.h1`
 
 export const query = graphql`
     query($pagePath: String!) {
-      allIndividual061223Json(filter: {name: {eq: $pagePath}} ) {
+      allIndividual062923Json(filter: {name: {eq: $pagePath}} ) {
         nodes {
           lowerAmount
           name
@@ -48,7 +48,7 @@ export const query = graphql`
 
 const PageTemplate = (props) => {
   
-  const data = props.data.allIndividual061223Json.nodes;
+  const data = props.data.allIndividual062923Json.nodes;
 
   const [frontGroupData] = useData()
   const frontGroup = frontGroupData.toJS()
@@ -87,7 +87,7 @@ const PageTemplate = (props) => {
       
     return (
     <div className="App">
-      <Desc>Between May 24, 2018 and June 12, 2023, {groupName} ran {count} ad(s) across Meta's platforms, spending at least ${spend}. To see the original ads from the Facebook Ad Library, click <OutboundLink to={adLink} from='/'>here</OutboundLink>.
+      <Desc>Between May 24, 2018 and June 29, 2023, {groupName} ran {count} ad(s) across Meta's platforms, spending at least ${spend}. To see the original ads from the Facebook Ad Library, click <OutboundLink to={adLink} from='/'>here</OutboundLink>.
       <br></br><br></br>
       Read our <OutboundLink from="/" to="https://www.energyandpolicy.org/utility-front-groups-spending-on-disinformation-advertising">report that analyzes</OutboundLink> these front group advertisements. View our methodology and source code <OutboundLink from="/" to="https://github.com/Energy-and-Policy-Institute/fb-ad-tracker">here</OutboundLink>.
       <br></br><br></br>

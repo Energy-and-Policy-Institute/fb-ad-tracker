@@ -90,7 +90,7 @@ const Landing = () => {
   return (
     <div className="App">
       <Title>Spending by Utility Front Group</Title>
-      <Subtitle>May 24, 2018 - June 29, 2023</Subtitle>
+      <Subtitle>May 24, 2018 - July 7, 2023</Subtitle>
       <Table columns={columns} data={data.toJS()} />
       <Credit>Tool built by <OutboundLink to="https://www.energyandpolicy.org/shelby-green/" from="/">Shelby Green</OutboundLink> with the Energy and Policy Institute. Having issues using the tool or want to make a suggestion? Please <OutboundLink to="https://www.energyandpolicy.org/contact-us/" from="/">contact</OutboundLink> us!</Credit>
     </div>

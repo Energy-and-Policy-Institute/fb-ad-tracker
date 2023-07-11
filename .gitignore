@@ -23,3 +23,7 @@ notes.md
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+data/all-front-group-ads-070723.csv
+individual-070723.json
+summary-070723.json
+summary070723Clean.json

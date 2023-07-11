@@ -11,6 +11,23 @@ import { OutboundLink } from './Link'
 
 // components
 
+const Title = styled.div`
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 0rem;
+  margin-bottom: 0.5rem;
+  padding: 0 0 0 0;
+  font-family: "HelveticaNeue-Bold";
+`;
+
+const Subtitle = styled.div`
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-top: 0rem;
+  margin-bottom: 2rem;
+  padding: 0 0 0 0;
+`;
+
 const Desc = styled.h1`
   font-size: 19px;
   font-weight: 400;
@@ -35,7 +52,7 @@ const Credit = styled.h1`
 
 export const query = graphql`
     query($pagePath: String!) {
-      allIndividual062923Json(filter: {name: {eq: $pagePath}} ) {
+      allIndividual070723Json(filter: {name: {eq: $pagePath}} ) {
         nodes {
           lowerAmount
           name
@@ -48,7 +65,7 @@ export const query = graphql`
 
 const PageTemplate = (props) => {
   
-  const data = props.data.allIndividual062923Json.nodes;
+  const data = props.data.allIndividual070723Json.nodes;
 
   const [frontGroupData] = useData()
   const frontGroup = frontGroupData.toJS()
@@ -87,13 +104,16 @@ const PageTemplate = (props) => {
       
     return (
     <div className="App">
-      <Desc>Between May 24, 2018 and June 29, 2023, {groupName} ran {count} ad(s) across Meta's platforms, spending at least ${spend}. To see the original ads from the Facebook Ad Library, click <OutboundLink to={adLink} from='/'>here</OutboundLink>.
-      <br></br><br></br>
-      Read our <OutboundLink from="/" to="https://www.energyandpolicy.org/utility-front-groups-spending-on-disinformation-advertising">report that analyzes</OutboundLink> these front group advertisements. View our methodology and source code <OutboundLink from="/" to="https://github.com/Energy-and-Policy-Institute/fb-ad-tracker">here</OutboundLink>.
+      <Title>{groupName}</Title>
+      <Subtitle>May 24, 2018 - July 7, 2023</Subtitle>
+      <Desc>During this time frame, {groupName} ran {count} <OutboundLink to={adLink} from='/'>ad(s)</OutboundLink> across Meta's platforms, spending at least ${spend}.
       <br></br><br></br>
       Below is its ad spend by region:</Desc>
       {/* <Return><a href="/"><MdOutlineKeyboardBackspace /> Go back </a></Return> */}
       <Table columns={columns} data={data} />
+      <br></br><br></br>
+      Read our <OutboundLink from="/" to="https://www.energyandpolicy.org/utility-front-groups-spending-on-disinformation-advertising">report that analyzes</OutboundLink> these front group advertisements. View our methodology and source code <OutboundLink from="/" to="https://github.com/Energy-and-Policy-Institute/fb-ad-tracker">here</OutboundLink>.
+      <br></br><br></br>
       <Credit>Tool built by <OutboundLink to="https://www.energyandpolicy.org/shelby-green/" from="/">Shelby Green</OutboundLink> with the Energy and Policy Institute. Having issues using the tool or want to make a suggestion? Please <OutboundLink to="https://www.energyandpolicy.org/contact-us/" from="/">contact</OutboundLink> us!</Credit>
     </div>
     )

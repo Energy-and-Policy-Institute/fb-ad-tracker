@@ -52,7 +52,7 @@ const Credit = styled.h1`
 
 export const query = graphql`
     query($pagePath: String!) {
-      allIndividual070723Json(filter: {name: {eq: $pagePath}} ) {
+      allIndividual040824Json(filter: {name: {eq: $pagePath}} ) {
         nodes {
           lowerAmount
           name
@@ -65,7 +65,7 @@ export const query = graphql`
 
 const PageTemplate = (props) => {
   
-  const data = props.data.allIndividual070723Json.nodes;
+  const data = props.data.allIndividual040824Json.nodes;
 
   const [frontGroupData] = useData()
   const frontGroup = frontGroupData.toJS()
@@ -105,7 +105,7 @@ const PageTemplate = (props) => {
     return (
     <div className="App">
       <Title>{groupName}</Title>
-      <Subtitle>May 24, 2018 - July 7, 2023</Subtitle>
+      <Subtitle>May 24, 2018 - April 8, 2024</Subtitle>
       <Desc>During this time frame, {groupName} ran {count} <OutboundLink to={adLink} from='/'>ad(s)</OutboundLink> across Meta's platforms, spending at least ${spend}.
       <br></br><br></br>
       Below is its ad spend by region:</Desc>

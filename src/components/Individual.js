@@ -66,6 +66,8 @@ export const query = graphql`
 const PageTemplate = (props) => {
   
   const data = props.data.allIndividual040824Json.nodes;
+  console.log(props.data)
+
 
   const [frontGroupData] = useData()
   const frontGroup = frontGroupData.toJS()

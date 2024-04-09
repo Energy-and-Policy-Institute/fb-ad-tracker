@@ -26,11 +26,8 @@ yarn-error.log*
 
 # data
 data/all-front-group-ads-070723.csv
+data/all-front-group-ads-040824.csv
 individual-070723.json
 summary-070723.json
 summary070723Clean.json
 data/all-front-group-ads-010824.csv
-data/all-front-group-ads-040824.csv
-data/individual-040824.json
-data/summary-040824.json
-data/summary040824Clean.json

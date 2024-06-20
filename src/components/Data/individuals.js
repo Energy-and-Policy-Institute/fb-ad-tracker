@@ -4,7 +4,7 @@ import { fromJS } from 'immutable'
 export const useIndividualData = () => {
   const data = useStaticQuery(graphql`
   query {
-    allIndividual040824Json {
+    allIndividual062024Json {
       edges {
         node {
             name
@@ -15,7 +15,7 @@ export const useIndividualData = () => {
       }
     }
   }
-  `).allIndividual040824Json.edges.map(({ node }) => {
+  `).allIndividual062024Json.edges.map(({ node }) => {
 
     return {
       ...node,

@@ -12,7 +12,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     // Query for allIndividual2021Json nodes to use in creating the pages for every front group
     const result = await graphql(`
         {
-          allIndividual040824Json {
+          allIndividual062024Json {
             edges {
               node {
                   name
@@ -28,7 +28,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
     // Create pages for each front group
     const pageTemplate = path.resolve(`src/components/Individual.js`) // page query and template
-    result.data.allIndividual040824Json.edges.forEach(({ node }) => {
+    result.data.allIndividual062024Json.edges.forEach(({ node }) => {
       const path = `/${node.name.replace(/[\s:]+/g, '-')}` // dynamic path of the front group, replacing spaces w/ '-'
       createPage({
         path,
